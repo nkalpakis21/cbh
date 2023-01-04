@@ -26,5 +26,9 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
 - Update generateReport function to properly append the new custom id
 - Each line should contain the shift and the following meta data. "Xxx xxx xxx new-custom-id" (This line that contains meta data will be received from the stakeholder)
 
-
+3. Give the facility a way to add/update the custom userId || 1 day
+- Add input field on config user facing page that lets the facility input a custom id for an agent
+- Update API data model to be able to intake the new custom id param when saving an agent
+- Update service and repository layer to take the custom id from the API request and add it to the agent object being saved to the table.
+- Do not fail the api response if no custom id is given assuming this is a nullable field
 
