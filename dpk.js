@@ -1,4 +1,3 @@
-const crypto = require("crypto");
 const { getEventCandidate, createHash} = require("./utils");
 
 exports.deterministicPartitionKey = (event) => {
