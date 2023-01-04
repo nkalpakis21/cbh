@@ -8,6 +8,15 @@ exports.createHash = (data) => {
     }
 }
 
+// I'm not sure the correct way to export this function but also use it in this file
+const createHash = (data) => {
+    try {
+        return crypto.createHash("sha3-512").update(data).digest("hex");
+    } catch (e) {
+        console.error(e);
+    }
+}
+
 exports.getEventCandidate = (event) => {
     let eventCandidate;
     if (event.partitionKey) {
